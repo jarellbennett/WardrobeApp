@@ -1,0 +1,72 @@
+﻿@model WardrobeApp.Models.Outfit
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Outfit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottom.BotName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottom.BotName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occasion.OccasionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season.SeasonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season.SeasonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Top.TopName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Top.TopName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutfitName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutfitName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoryID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

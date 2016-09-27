@@ -12,12 +12,11 @@ namespace WardrobeApp.Models
         public int OutfitID { get; set; }
         public string OutfitName { get; set; }
 
-        public int TopID;
-        public int BotID;
-        public int ShoeID;
-        public int AccessoryID;
-        public int SeasonID;
-        public int OccasionID;
+        public int TopID { get; set; }
+        public int BottomID { get; set; }
+        public int AccessoryID { get; set; }
+        public int SeasonID { get; set; }
+        public int OccasionID { get; set; }
 
 
         //Foreign Keys
