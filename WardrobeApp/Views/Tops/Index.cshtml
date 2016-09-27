@@ -33,7 +33,7 @@
         </td>
         <td>
             @*@Html.DisplayFor(modelItem => item.TopPhoto)*@
-            <img src="Url.content(itme.TopPhoto)"/>
+            <img class="photo" src="@Url.Content(item.TopPhoto)"/>
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |

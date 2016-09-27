@@ -152,7 +152,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pics\Blackshirt.jpeg" />
     <Content Include="Content\Pics\Blazer.jpg" />
+    <Content Include="Content\Pics\dress shirt.jpg" />
+    <Content Include="Content\Pics\maroon sweater.jpg" />
+    <Content Include="Content\Pics\tanktop.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
