@@ -8,13 +8,18 @@ namespace WardrobeApp.Models
 {
     public class Outfit
     {
+        public Outfit()
+         {
+            Accessories = new HashSet<Accessory>();
+         }
         [Key]
         public int OutfitID { get; set; }
         public string OutfitName { get; set; }
 
         public int TopID { get; set; }
         public int BottomID { get; set; }
-        public int AccessoryID { get; set; }
+        public int ShoesID { get; set; }
+        
         public int SeasonID { get; set; }
         public int OccasionID { get; set; }
 

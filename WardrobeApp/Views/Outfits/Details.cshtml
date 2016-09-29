@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.OutfitName)
+            @Html.DisplayNameFor(model => model.Bottom.BotName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.OutfitName)
+            @Html.DisplayFor(model => model.Bottom.BotName)
         </dd>
 
         <dt>
@@ -35,6 +35,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Shoe.ShoeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoe.ShoeName)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Top.TopName)
         </dt>
 
@@ -43,19 +51,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Bottom.BotName)
+            @Html.DisplayNameFor(model => model.OutfitName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Bottom.BotName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccessoryID)
+            @Html.DisplayFor(model => model.OutfitName)
         </dd>
 
     </dl>

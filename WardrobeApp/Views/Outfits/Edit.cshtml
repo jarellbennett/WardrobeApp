@@ -1,4 +1,4 @@
-﻿@model WardrobeApp.Models.Outfit
+﻿@model WardrobeApp.ViewModels.OutfitViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -15,53 +15,58 @@
         <h4>Outfit</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.OutfitID)
+        @Html.HiddenFor(model => model.Outfit.OutfitID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.OutfitName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Outfit.OutfitName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.OutfitName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.OutfitName, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Outfit.OutfitName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Outfit.OutfitName, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TopID, "TopID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Outfit.TopID, "TopID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("TopID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.TopID, "", new { @class = "text-danger" })
+                @*@Html.DropDownList("TopID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(model => model.Outfit.TopID, (SelectList)ViewBag.TopID, htmlAttributes: new { @class = " form-control"})
+                @Html.ValidationMessageFor(model => model.Outfit.TopID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.BottomID, "BottomID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Outfit.BottomID, "BottomID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BottomID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.BottomID, "", new { @class = "text-danger" })
+                @*@Html.DropDownList("BottomID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(model => model.Outfit.BottomID, (SelectList)ViewBag.BottomID, htmlAttributes: new { @class = " form-control" })
+                @Html.ValidationMessageFor(model => model.Outfit.BottomID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.AccessoryID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Outfit.ShoesID, "ShoesID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AccessoryID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AccessoryID, "", new { @class = "text-danger" })
+                @*@Html.DropDownList("ShoesID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(model => model.Outfit.ShoesID, (SelectList)ViewBag.ShoesID, htmlAttributes: new { @class = " form-control" })
+                @Html.ValidationMessageFor(model => model.Outfit.ShoesID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SeasonID, "SeasonID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Outfit.SeasonID, "SeasonID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("SeasonID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.SeasonID, "", new { @class = "text-danger" })
+                @*@Html.DropDownList("SeasonID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(model => model.Outfit.SeasonID, (SelectList)ViewBag.SeasonID, htmlAttributes: new { @class = " form-control" })
+                @Html.ValidationMessageFor(model => model.Outfit.SeasonID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.OccasionID, "OccasionID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Outfit.OccasionID, "OccasionID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("OccasionID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.OccasionID, "", new { @class = "text-danger" })
+                @*@Html.DropDownList("OccasionID", null, htmlAttributes: new { @class = "form-control" })*@
+                @Html.DropDownListFor(model => model.Outfit.OccasionID, (SelectList)ViewBag.OccasionID, htmlAttributes: new { @class = " form-control" })
+                @Html.ValidationMessageFor(model => model.Outfit.OccasionID, "", new { @class = "text-danger" })
             </div>
         </div>
 

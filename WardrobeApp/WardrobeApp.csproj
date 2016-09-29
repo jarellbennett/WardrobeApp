@@ -139,6 +139,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609262353510_InitialCreate.cs" />
+    <Compile Include="Migrations\201609262353510_InitialCreate.Designer.cs">
+      <DependentUpon>201609262353510_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609272358487_DeleteAccessoryID.cs" />
+    <Compile Include="Migrations\201609272358487_DeleteAccessoryID.Designer.cs">
+      <DependentUpon>201609272358487_DeleteAccessoryID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292155293_addedshoesIDtoOutfitcontroller.cs" />
+    <Compile Include="Migrations\201609292155293_addedshoesIDtoOutfitcontroller.Designer.cs">
+      <DependentUpon>201609292155293_addedshoesIDtoOutfitcontroller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Bottom.cs" />
     <Compile Include="Models\Occasion.cs" />
@@ -148,6 +161,7 @@
     <Compile Include="Models\Top.cs" />
     <Compile Include="Models\WardrobeAppContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\OutfitViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -235,6 +249,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609262353510_InitialCreate.resx">
+      <DependentUpon>201609262353510_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609272358487_DeleteAccessoryID.resx">
+      <DependentUpon>201609272358487_DeleteAccessoryID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292155293_addedshoesIDtoOutfitcontroller.resx">
+      <DependentUpon>201609292155293_addedshoesIDtoOutfitcontroller.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
