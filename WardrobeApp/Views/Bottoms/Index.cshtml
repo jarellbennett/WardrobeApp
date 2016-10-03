@@ -31,9 +31,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.BotColor)
         </td>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.BotPhoto)
+            <img class="photo" src="@Url.Content(item.BotPhoto)" />
         </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
             @Html.ActionLink("Details", "Details", new { id=item.BottomID }) |

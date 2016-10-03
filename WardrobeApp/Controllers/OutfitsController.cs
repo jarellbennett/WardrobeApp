@@ -40,12 +40,26 @@ namespace WardrobeApp.Controllers
         // GET: Outfits/Create
         public ActionResult Create()
         {
+            Outfit outfit = new Outfit();
+
             ViewBag.BottomID = new SelectList(db.Bottoms, "BottomID", "BotName");
             ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName");
             ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName");
             ViewBag.ShoesID = new SelectList(db.Shoes, "ShoesID", "ShoeName");
             ViewBag.TopID = new SelectList(db.Tops, "TopID", "TopName");
-            return View();
+
+            OutfitViewModel outfitViewModel = new OutfitViewModel
+            {
+                Outfit = outfit,
+                AllAccessories = (from a in db.Accessories
+                                  select new SelectListItem
+                                  {
+                                      Value = a.AccessoryID.ToString(),
+                                      Text = a.AccessoryName
+                                  })
+            };
+            return View(outfitViewModel);
+            
         }
 
         // POST: Outfits/Create
@@ -53,11 +67,29 @@ namespace WardrobeApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OutfitID,OutfitName,TopID,BottomID,ShoesID,SeasonID,OccasionID")] Outfit outfit)
+        public ActionResult Create([Bind(Include = "OutfitID,OutfitName,TopID,BottomID,ShoesID,SeasonID,OccasionID")] Outfit outfit, List<int> SelectedAccessories)
         {
             if (ModelState.IsValid)
             {
-                db.Outfits.Add(outfit);
+
+                //create a variable to access the data in the database
+                var newOutfit = outfit;
+
+                newOutfit.TopID = outfit.TopID;
+                newOutfit.BottomID = outfit.BottomID;
+                newOutfit.ShoesID = outfit.ShoesID;
+                newOutfit.OccasionID = outfit.OccasionID;
+                newOutfit.SeasonID = outfit.SeasonID;
+
+
+                foreach (int accessoryID in SelectedAccessories)
+                {
+                    //find the accessory by its id and add it to the existing outfit
+                    newOutfit.Accessories.Add(db.Accessories.Find(accessoryID));
+
+                }
+
+                db.Outfits.Add(newOutfit);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -107,11 +139,27 @@ namespace WardrobeApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OutfitID,OutfitName,TopID,BottomID,ShoesID,SeasonID,OccasionID")] Outfit outfit)
+        public ActionResult Edit([Bind(Include = "OutfitID,OutfitName,TopID,BottomID,ShoesID,SeasonID,OccasionID")] Outfit outfit,List<int> SelectedAccessories)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(outfit).State = EntityState.Modified;
+                //create a variable to access the data in the database
+                var existiingOutfit = db.Outfits.Find(outfit.OutfitID);
+
+                existiingOutfit.TopID = outfit.TopID;
+                existiingOutfit.BottomID = outfit.BottomID;
+                existiingOutfit.ShoesID = outfit.ShoesID;
+
+                existiingOutfit.Accessories.Clear();
+
+                foreach(int accessoryID in SelectedAccessories)
+                {
+                    //find the accessory by its id and add it to the existing outfit
+                    existiingOutfit.Accessories.Add(db.Accessories.Find(accessoryID));
+
+                }
+
+                
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
