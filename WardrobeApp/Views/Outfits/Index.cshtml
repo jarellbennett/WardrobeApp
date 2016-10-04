@@ -24,14 +24,15 @@
             Shoe
         </th>
         <th>
+            Accessories
+        </th>
+        <th>
             Occasion
         </th>
         <th>
            Season
         </th>
-        <th>
-            Accessories
-        </th>
+        
         <th></th>
     </tr>
 
@@ -54,18 +55,19 @@
                 <img class="photo" src="@Url.Content(item.Shoe.ShoePhoto)" />
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Season.SeasonName)
-            </td>
-            <td>
                 @foreach (var accessory in item.Accessories)
                 {
                     <div>@Html.DisplayFor(modelItem => accessory.AccessoryName)</div>
                     <img class="photo" src="@Url.Content(accessory.AccessoryPhoto)" />
                 }
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season.SeasonName)
+            </td>
+            
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |

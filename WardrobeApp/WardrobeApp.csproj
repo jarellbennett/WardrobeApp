@@ -167,6 +167,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Pics\AirMax.png" />
+    <Content Include="Content\Pics\airwair.jpg" />
     <Content Include="Content\Pics\black dresspants.jpg" />
     <Content Include="Content\Pics\black jeans.jpg" />
     <Content Include="Content\Pics\Blackshirt.jpeg" />
@@ -175,7 +176,6 @@
     <Content Include="Content\Pics\capri khaki.jpg" />
     <Content Include="Content\Pics\Cavs.jpg" />
     <Content Include="Content\Pics\Cross.jpg" />
-    <Content Include="Content\Pics\Docs.png" />
     <Content Include="Content\Pics\dress shirt.jpg" />
     <Content Include="Content\Pics\grey sweats.jpg" />
     <Content Include="Content\Pics\LiveStrong.jpg" />
@@ -186,10 +186,12 @@
     <Content Include="Content\Pics\tanktop.jpg" />
     <Content Include="Content\Pics\Tims.png" />
     <Content Include="Content\Pics\Vans.png" />
+    <Content Include="Content\Site pictures\armani.jpg" />
     <Content Include="Content\Site pictures\darky.jpg" />
-    <Content Include="Content\Site pictures\fresh walkin.jpg" />
+    <Content Include="Content\Site pictures\drkgrey.png" />
+    <Content Include="Content\Site pictures\express.jpg" />
+    <Content Include="Content\Site pictures\salvatore.jpg" />
     <Content Include="Content\Site pictures\walk-in closet.jpg" />
-    <Content Include="Content\Site pictures\wallbackground.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
