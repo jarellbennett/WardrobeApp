@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    
+    background-image: url('Site pictures/darky.jpg');
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,3 +29,10 @@ textarea {
     height:149px;
     width: 159px;
 }
+
+.jumbotron{
+    background-image: url('Site pictures/walk-in closet.jpg');
+    background-size:auto;
+    background-position:center;
+}
+

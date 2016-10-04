@@ -171,7 +171,7 @@
     <Content Include="Content\Pics\black jeans.jpg" />
     <Content Include="Content\Pics\Blackshirt.jpeg" />
     <Content Include="Content\Pics\Blazer.jpg" />
-    <Content Include="Content\Pics\BoyBeads.jpg" />
+    <Content Include="Content\Pics\blkskull boybeads.jpg" />
     <Content Include="Content\Pics\capri khaki.jpg" />
     <Content Include="Content\Pics\Cavs.jpg" />
     <Content Include="Content\Pics\Cross.jpg" />
@@ -186,6 +186,10 @@
     <Content Include="Content\Pics\tanktop.jpg" />
     <Content Include="Content\Pics\Tims.png" />
     <Content Include="Content\Pics\Vans.png" />
+    <Content Include="Content\Site pictures\darky.jpg" />
+    <Content Include="Content\Site pictures\fresh walkin.jpg" />
+    <Content Include="Content\Site pictures\walk-in closet.jpg" />
+    <Content Include="Content\Site pictures\wallbackground.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

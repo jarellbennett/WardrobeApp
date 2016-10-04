@@ -12,22 +12,22 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.OutfitName)
+            Outfit
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Top.TopName)
+            Top
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Bottom.BotName)
+            Bottom
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Shoe.ShoeName)
+            Shoe
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
+            Occasion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
+           Season
         </th>
         <th>
             Accessories
@@ -43,12 +43,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Top.TopName)
+                <img class="photo" src="@Url.Content(item.Top.TopPhoto)" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Bottom.BotName)
+                <img class="photo" src="@Url.Content(item.Bottom.BotPhoto)" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Shoe.ShoeName)
+                <img class="photo" src="@Url.Content(item.Shoe.ShoePhoto)" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
@@ -60,6 +63,7 @@
                 @foreach (var accessory in item.Accessories)
                 {
                     <div>@Html.DisplayFor(modelItem => accessory.AccessoryName)</div>
+                    <img class="photo" src="@Url.Content(accessory.AccessoryPhoto)" />
                 }
             </td>
             <td>
